@@ -8,10 +8,13 @@
 *{
     box-sizing: border-box;
     scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
 }
 body{
     margin: 0;
     padding: 0;
+    width: 100vw;
     font-family: poppins, cursive;
 }
 
@@ -24,6 +27,7 @@ body{
     justify-content: space-between;
     padding: 0 2em;
     position: fixed;
+    z-index: 100;
 }
 .nav-menu{
     list-style: none;
@@ -69,7 +73,7 @@ body{
 
 /* Hero Section */
 .hero{
-    width: 100vw;
+    width: 100%;
     height: calc(100vh-100px);
     height: 100vh;
 }
@@ -99,15 +103,188 @@ body{
 }
 
 
+.store{
+    width: 100%;
+    height: 85vh;
+    background-color: #92DFC2;
+    position: relative;
+}
+.white-div{
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    background-color: white;
+    display: none;
+}
+.store-container{
+    z-index: 33;
+    display: flex;
+    color: black;
+    padding: 2em 4em;
+    justify-content: space-around;
+}
+.store-card{
+    width: 35%;
+    height: 60vh;
+    padding-bottom: 2em;
+    text-align: center;
+}
+.store-img{
+    background-image: url("/imgs/toa-heftiba-S1Z_Cudra0k-unsplash.jpg");
+    width: 100%;
+    height: 80%;
+    background-size: cover;
+}
+.store-card h2{
+    margin-top: 1em;
+    font-size: 32px;
+    font-family: grot, sans-serif;
+}
+
+
+.welcome{
+    min-height: 85vh;
+    height: 100%;
+    width: 100%;
+    padding-top: 65px;
+    padding-bottom: 2em;
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+}
+.wel-btn{
+    background-color: #ffc547;
+    text-decoration: none;
+    color: black;
+    font-size: 1.05em;
+    font-weight: 500;
+    margin-top: 1em;
+}
+.wel-header img{
+    width: 40px;
+}
+.wel-header{
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+}
+.wel-header h1{
+    font-size: 2em;
+    font-family: grot, sans-serif;
+}
+.wel-details{
+    width: 60%;
+    text-align: center;
+    margin-top: 1em;
+}
+.wel-details p:last-child{
+    margin-bottom: 1em;
+}
+
+.wel-img{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 100px;
+    right: 7em;
+}
+
+
+.pics{
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.pic1, .pic2{
+    display: flex;
+    width: 100%;
+    height: 60vh;
+}
+.pic-img{
+    width: 50%;
+    height: 100%;
+    background-image: url("/imgs/ceyda-ciftci--ylyzFOEBS0-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.pic-details{
+    width: 50%;
+    height: 100%;
+    background-color: #ffc547;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.pic-details h2{
+    font-size: 2em;
+    font-family: grot, sans-serif;
+    margin-bottom: .5em;
+}
+.pic-details a{
+    padding: .5em 1em;
+    color: white;
+    background-color: black;
+    border: none;
+    margin-top: .6em;
+    text-decoration: none;
+    font-weight: 500;
+}
+.pic2 > .pic-details{
+    background-color: #92DFC2;
+}
+.pic2 > .pic-details > p{
+    width: 80%;
+}
+
 
 
 @media (max-width:900px){
+    .wel-header h1{
+        font-size: 1.5em;
+    }
+    .wel-details{
+        width: 80%;
+    }
+    .wel-img{
+        bottom: 2em;
+        right: 2em;
+    }
+    .store{
+        min-height: 85vh;
+        height: 100%;
+        padding-bottom: 4em;
+        padding-top: 95px;
+    }
+    .wel-btn{
+        font-size: 1em;
+    }
+    .store-container{
+        flex-direction: column;
+        justify-content: center;
+        padding: 1em 1em;
+    }
+    .store-card{
+        width: 90%;
+        height: 60vh;
+        margin-bottom: 1em;
+        margin-right: 0;
+    }
     .hero{
         max-height: 100vh;
     }
     .nav{
-        position: relative;
+        position: fixed;
         padding: 0 2rem;
+        z-index: 100;
+        height: 80PX;
+    }
+    .prev, .next{
+        font-size: 24px;
     }
     .toggle-menus{
         display: block;
