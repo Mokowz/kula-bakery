@@ -42,7 +42,7 @@ body{
     font-weight: 500;
 }
 .logo h1{
-    font-family: grot;
+    font-family: grot, sans-serif;
     display: flex;
     flex-direction: column;
     text-align: center;
